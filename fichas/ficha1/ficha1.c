@@ -10,14 +10,15 @@ void alinea_1_1(){
     x = x*y;
     y = x+y;
     printf("%d %d",x,y);
-    printf("\n");
+    printf("\n\n");
 }
 
 void alinea_1_2(){
     int x, y;
     x = 0;
+    y = 1;
     printf ("%d %d", x, y);
-    printf("\n");
+    printf("\n\n");
 }
 
 void alinea_1_4(){
@@ -25,7 +26,7 @@ void alinea_1_4(){
     x = 200; y = 100;
     x = x+y; y = x-y; x = x-y;
     printf ("%d %d", x, y);
-    printf("\n");
+    printf("\n\n");
 }
 
 // exercicio 2
@@ -36,7 +37,7 @@ void alinea_2_1(){
     if (x > y)
     y = 6;
     printf ("%d %d", x, y);
-    printf("\n");
+    printf("\n\n");
 }
 
 void alinea_2_2(){
@@ -46,7 +47,7 @@ void alinea_2_2(){
         x = x+1; y += x;
     }
     printf ("%d %d", x, y);
-    printf("\n");
+    printf("\n\n");
 }
 
 void alinea_2_3(){
@@ -54,7 +55,7 @@ void alinea_2_3(){
     for (i=0; (i<20) ; i++)
     if (i%2 == 0) putchar ('_');
     else putchar ('#');
-    printf("\n");
+    printf("\n\n");
 }
 
 
@@ -69,7 +70,22 @@ void alinea_3_1(){
         printf("\n");
         x=0;
     }
+    printf("\n\n");
 }
+
+void alinea_3_2(){
+    int x,y;
+    for(y=0; (y<5); y++){
+        for(x=0; x<5 ; x++){
+           if(y%2 == 0 && x%2 == 0) putchar('#');
+           
+        }
+        printf("\n");
+        x=0;
+    }
+    printf("\n\n");
+}
+
 
 
 int main(){
