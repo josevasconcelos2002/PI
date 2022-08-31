@@ -78,6 +78,9 @@ void alinea_3_2(){
     for(y=0; (y<5); y++){
         for(x=0; x<5 ; x++){
            if(y%2 == 0 && x%2 == 0) putchar('#');
+           else if(y%2 == 1 && x%2 == 1) putchar('#');
+                else if(y%2 == 0 && x%2 == 1) putchar('_');
+                     else putchar('_');
            
         }
         printf("\n");
@@ -96,4 +99,5 @@ int main(){
    alinea_2_2();
    alinea_2_3();
    alinea_3_1();
+   alinea_3_2();
 }
