@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 //1
 float multInt1 (){
@@ -44,9 +45,31 @@ float multInt2 (){
 }
 
 //3
-//int mdc1(){
-
- //}
+/*
+int mdc1(){
+  int a,b,i,n,d,D,M;
+  d=0;
+  D=0;
+  printf("Introduza as variáveis a e b, respetivamente\n");
+  scanf("%d %d",&a,&b);
+  if(a<0 || b<0){
+    printf("Volte a introduzir os valores de a e b\n");
+    scanf("%d %d",&a,&b);
+  }
+  else if(a<=b){
+    for(i=1;i<=a;i++){
+      if(a%i == 0) d=i;
+    }
+    for(i=1;i<=b;i++){
+      if(b%i == 0) D=i;
+    }
+    if(d==D) printf("O máximo divisor comum entre %d e %d é: %d\n",a,b,d);
+    else for(i=1;i>=1;i++){
+      
+    }
+  }
+}
+*/
 int main(){
   int r=1;
   do{
@@ -57,7 +80,8 @@ int main(){
     printf("4. Máximo divisor comum entre a e b (Euclides)\n");
     printf("5. Máximo divisor comum entre a e b (Euclides)(%%)\n");
     printf("6. Sequência de Fibonacci\n");
-    printf("7. Sair :(\n");
+    printf("7. Sequência de Fibonacci (mais eficiente)\n");
+    printf("8. Sair :(\n");
     
     scanf("%d",&r);
     system("cls || clear");
@@ -71,45 +95,35 @@ int main(){
         case 2:
           multInt2();
           break;
-        /*
+        
         case 3:
-        int n;
-        float m;
-        printf("Introduza as variáveis n e m\n");
-        scanf("%d %f",&n,&m);
-        multInt1(n,m);
-        break;
-
+          mdc1();
+          break;
+        /*
         case 4:
-        int n;
-        float m;
-        printf("Introduza as variáveis n e m\n");
-        scanf("%d %f",&n,&m);
-        multInt1(n,m);
-        break;
+          mdc2();
+          break;
 
         case 5:
-        int n;
-        float m;
-        printf("Introduza as variáveis n e m\n");
-        scanf("%d %f",&n,&m);
-        multInt1(n,m);
-        break;
+          mdc2%();
+          break;
 
         case 6:
-        int n;
-        float m;
-        printf("Introduza as variáveis n e m\n");
-        scanf("%d %f",&n,&m);
-        multInt1(n,m);
-        break;
-        */
+          fib1();
+          break;
+
         case 7:
+          fib2();
+          break;
+        */
+        case 8:
           printf("Já vais? :(\n\n");
+          sleep(2);
+          system("clear || cls");
           break;
         
         default:
           printf("Valor inválido\n");
     }
-  } while(r!=7);
+  } while(r!=8);
 }
