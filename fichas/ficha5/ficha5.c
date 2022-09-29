@@ -15,7 +15,7 @@ float nota(){
     printf("Introduza o número do aluno\n");
     scanf("%d",&a.numero);
     printf("Introduza o nome do aluno\n");
-    scanf("%s",&a.nome);
+    scanf("%s",a.nome);
     printf("Introduza as notas dos Mini-testes\n");
     for(i=0;i<6;i++){
         scanf("%d",&a.miniT[i]);
@@ -34,9 +34,22 @@ float nota(){
     printf("Introduza a nota do teste\n");
     scanf("%f",&a.teste);
     nota = 0.75*a.teste + media2;
-    printf("A nota final do aluno é: %f\n",nota);
+    printf("A nota final do aluno %s é: %f\n",a.nome,nota);
     return nota;
 }
+
+
+int procuraNum(){
+    int num,N;
+    printf("Introduza o tamanho do array: \n");
+    scanf("%d",&N);
+    Aluno t[N];
+}
+
+
+
+
 int main(){
      nota();
+     procuraNum();
 }
