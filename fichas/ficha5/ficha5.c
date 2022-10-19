@@ -8,6 +8,18 @@ typedef struct  aluno {
     float teste;
 } Aluno;
 
+Aluno t[4] = {{4444, "André", {2,1,0,2,2,2}, 10.5}
+             ,{2222, "Joana", {2,2,2,1,0,0}, 14.5}
+             ,{7777, "Maria", {2,2,2,2,2,1}, 18.5}
+             ,{3333, "Paulo", {0,0,2,2,2,1}, 8.7}
+            };
+Aluno v[4] = {{2222, "Joana", {2,2,2,1,0,0}, 14.5}
+             ,{3333, "Paulo", {0,0,2,2,2,1}, 8.7}
+             ,{4444, "André", {2,1,0,2,2,2}, 10.5}
+             ,{7777, "Maria", {2,2,2,2,2,1}, 18.5}
+            };
+
+/*
 float nota(){
     Aluno a;
     int i;
@@ -37,19 +49,25 @@ float nota(){
     printf("A nota final do aluno %s é: %f\n",a.nome,nota);
     return nota;
 }
+*/
 
-
-int procuraNum(){
-    int num,N;
-    printf("Introduza o tamanho do array: \n");
-    scanf("%d",&N);
-    Aluno t[N];
+int procuraNum(int num,Aluno v[],int N){
+    int i;
+    for(i=0;i<N;i++){
+        if(v[i].numero == num) printf("%d\n",i);
+    }
+    if (v[0].numero!=num && v[1].numero!=num && v[2].numero!=num  && v[3].numero!=num) printf("-1\n");
+    /*    if (for(i=0;i<N;i++){ 
+                        v[i].numero != num
+                        }) printf("-1\n");
+ 
+    */
 }
 
 
 
 
 int main(){
-     nota();
-     procuraNum();
+     procuraNum(2222,v,4);
+     procuraNum(7775,v,4);
 }

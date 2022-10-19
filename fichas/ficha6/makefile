@@ -1,8 +1,8 @@
 CFLAGS=-Wall -Wextra -pedantic -std=c11
 
-ficha2: ficha2.o
-	  gcc $(CFLAGS) $^ -o ficha2 -lm
-	  rm ficha2.o
+ficha6: ficha6.o
+	  gcc  -o ficha6 -lm
+	  rm ficha6.o
 
-ficha2.o: ficha2.c
-	      gcc $(CFLAGS) -c $^
+ficha6.o: ficha6.c
+	gcc $(CFLAGS) -c $^
